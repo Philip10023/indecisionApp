@@ -1,19 +1,21 @@
 import React from 'react'
 // cannot export default inlineillegal for const definitions
 
-const Option = (props) => {
-  return (
-    <div>
+const Option = (props) => (
+  <div className="option">
+    <p className="option__text">
+      {props.count}.
       {props.optionText}
-      <button
-        onClick={(e) => {
+    </p>
+    <button
+    className="button button--link"
+      onClick={(e) => {
         props.handleDeleteOption(props.optionText)
       }}
       >
-      x
-      </button>
-    </div>
-  );
-}
+        x
+    </button>
+  </div>
+)
 
 export default Option;
