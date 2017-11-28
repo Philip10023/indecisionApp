@@ -25,7 +25,6 @@ module.exports = {
     contentBase: path.join(__dirname, 'public')
   }
 }
-
 if (process.env.NODE_ENV === 'production') {
   delete config.devtool;
   var webpack = require('webpack');
