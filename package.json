@@ -5,7 +5,8 @@
   "author": "Phil Morgan",
   "license": "MIT",
   "scripts": {
-    "start": "NODE_ENV=production npm run webpack -- -p",
+    "start": "yarn run dev-server",
+    "heroku-postbuild": "NODE_ENV=production npm run webpack -- -p",
     "server": "live-server public/",
     "build": "webpack",
     "dev-server": "webpack-dev-server --port 3000"
