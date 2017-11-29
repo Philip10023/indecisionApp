@@ -8,7 +8,7 @@
     "server": "live-server public/",
     "build": "webpack",
     "build:prod": "webpack -p --env production",
-    "heroku-postbuild": "NODE_ENV=production npm run webpack -- -p",
+    "heroku-postbuild": "yarn run build:prod",
     "dev-server": "webpack-dev-server"
   },
   "dependencies": {
