@@ -5,11 +5,11 @@
   "author": "Phil Morgan",
   "license": "MIT",
   "scripts": {
-    "start": "yarn run dev-server",
-    "heroku-postbuild": "NODE_ENV=production npm run webpack -- -p",
     "server": "live-server public/",
     "build": "webpack",
-    "dev-server": "webpack-dev-server --port 3000"
+    "build:prod": "webpack -p --env production",
+    "heroku-postbuild": "NODE_ENV=production npm run webpack -- -p",
+    "dev-server": "webpack-dev-server"
   },
   "dependencies": {
     "babel-cli": "6.24.1",
